@@ -8,7 +8,7 @@
 get_header(); ?>
 
 	<div id="primary" class="page-main">
-		<main id="main" class="page-main__inner m-posts-list" role="main">
+		<main id="main" class="  m-posts-list" role="main">
 			<header class="m-posts-list-header">
 				<?php
 					single_cat_title( '<h1 class="page-title">', '</h1>' );

@@ -7,7 +7,7 @@
 <?php get_header(); ?>
 
 <div id="primary" class="page-main page-main--full-width page-main--no-bg">
-	<main id="main" class="page-main__inner" role="main">
+	<main id="main" class=" " role="main">
 	<?php while ( have_posts() ) : the_post(); ?>
 		<header class="page-home__header">
 				<?php the_title( '<h1 class="page-home__title">', '</h1>' ); ?>

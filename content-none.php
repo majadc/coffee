@@ -7,7 +7,7 @@
  * @package majadc_coffee
  */
 ?>
-<main id="main" class="page-main__inner page-no-resualts not-found" role="main">
+<main id="main" class="  page-no-resualts not-found" role="main">
 	<header class="page-header">
 		<h1 class="page-header__title"><?php _e( 'Nothing Found', 'majadc_coffee' ); ?></h1>
 	</header><!-- .page-header -->

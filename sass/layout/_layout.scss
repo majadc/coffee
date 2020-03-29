@@ -1,11 +1,6 @@
 .page-main {
 	max-width: 50rem;
 	margin:0 auto;
-	padding: 2rem;
-}
-.page-main--full-width {
-	max-width: 100%;
-	width: 100%;
 }
 .page-home {
 	width: 100%;
@@ -14,7 +9,10 @@
 	margin: 0 auto;	
 }
 
-
+.page-main--full-width {
+	max-width: 100%;
+	width: 100%;
+}
 
 
 

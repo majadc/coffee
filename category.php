@@ -8,7 +8,7 @@
 get_header(); ?>
 
 	<div id="primary" class="page-main">
-		<main id="main" class="page-main__inner page-category" role="main">
+		<main id="main" class="  page-category" role="main">
 			<header class="page-header">
 				<h1 class="page-header__tiltle"><?php single_cat_title( ); ?></h1>
 			</header>

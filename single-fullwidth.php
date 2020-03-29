@@ -10,8 +10,8 @@
 
 get_header(); ?>
 
-	<div id="primary" class="page-main page-main--full-width">
-		<main id="main" class="page-main__inner" role="main">
+	<div id="primary" class="page-main page-main--full-width page--theme-general">
+		<main id="main" role="main">
 
 		<?php while ( have_posts() ) : the_post(); ?>
 

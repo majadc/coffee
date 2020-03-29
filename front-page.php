@@ -11,7 +11,7 @@
 get_header(); ?>
 
 	<div id="primary" class="page-main page-home">
-		<main id="main" class="page-main__inner" role="main">
+		<main id="main" class=" " role="main">
 
 			<div id="index-cards" class="index-cards page-home__container">
 			<?php

@@ -15,7 +15,7 @@
 get_header(); ?>
 
 	<div id="primary" class="page-main">
-		<main id="main" class="page-main__inner m-posts-list" role="main">
+		<main id="main" class="  m-posts-list" role="main">
 		<?php if ( have_posts() ) : ?>
 			<?php while ( have_posts() ) : the_post(); ?>
 

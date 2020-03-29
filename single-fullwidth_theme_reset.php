@@ -1,7 +1,7 @@
 <?php
 /**
  * 
- * Template Name: Full Width Clean Style
+ * Template Name: Full Width Theme Reset Style
  * Template Post Type: post, page
  * The template for displaying one single post.
  *
@@ -10,12 +10,12 @@
 
 get_header(); ?>
 
-	<div id="primary" class="page-main page-main--full-width">
-		<main id="main" class="page-main__inner" role="main">
+	<div id="primary" class="page-main page-main--full-width page--theme-reset">
+		<main id="main" role="main">
 
 		<?php while ( have_posts() ) : the_post(); ?>
 
-			<?php get_template_part( 'content', 'single_clean_style' ); ?>
+			<?php get_template_part( 'content', 'single' ); ?>
 			
 
 

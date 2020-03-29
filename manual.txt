@@ -1,0 +1,2 @@
+<div class="prism-code"
+jako kontener dla code prism <pre class="language-html"> <code>

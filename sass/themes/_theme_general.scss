@@ -1,0 +1,135 @@
+.page--theme-general {
+	background-color: $color-8;
+	padding: 2rem;
+	.entry {
+		&__header {
+			.entry-title {
+				color: $color-2;
+				text-align: center;
+				font-size: 2.4rem;
+			}
+		}
+		&__footer {
+			display: flex;
+			justify-content: space-between;
+			p {
+				font-size: 1rem;
+				background-image: none;
+			}
+		}
+		img {
+			max-width: 100%;
+			height: auto;
+			margin: $margin-between-blocks-auto;
+			display: block;
+		}
+		ul, ol {
+			margin: $margin-top-base 0 $margin-bottom-base $margin-left-list;
+			padding-left: 2em;
+		}
+		ul {
+			padding-left:1.5em;
+		}
+		ul li {
+			position: relative;
+		}
+		ul>li::before {
+				content: '';
+				display: block;
+				position: absolute;
+				background-image: url('../images/pencil.svg');
+				background-size: cover;
+				width: 1em;
+				height: 1em;
+				left: -1.5em;
+				top: 0.2em;
+				@supports (mask-image: url()) {
+					background-color: $color-4;
+					-webkit-mask-image: url('../images/pencil.svg');
+					-webkit-mask-size: cover;
+					-webkit-mask-repeat: no-repeat;
+					mask-image: url('../images/pencil.svg');
+					mask-size: cover;
+					mask-repeat: no-repeat;
+					background-image: none;
+				}
+		}
+		
+		li>ul li::before {
+			background-image: url('../images/lightbulb.svg');
+			background-size: contain;
+			background-repeat: no-repeat;
+			top: 0.2em;
+			left: -1.2em;
+			@supports (mask-image: url()) {
+				background-color: $color-2;
+				-webkit-mask-image: url('../images/lightbulb.svg');
+				-webkit-mask-size: contain;
+				-webkit-mask-repeat: no-repeat;
+				mask-image: url('../images/lightbulb.svg');
+				mask-size:contain;
+				mask-repeat: no-repeat;
+				background-image: none;
+			}
+		}
+		ol {
+			list-style: decimal;
+		}
+
+		pre {
+			@include chequered-pattern;
+			@include font($font-2, normal, $normal);
+			font-size: 1rem;
+			line-height: 1.5;
+			margin: $margin-between-blocks;
+			max-width: 100%;
+			overflow: auto;
+			//padding: 1em;
+			color:$color-1;
+			letter-spacing: 1px;
+		}
+		code, kbd, tt, var {
+			@include font($font-2, normal, $normal);
+			font-size: 1rem;
+		}
+		pre:not([class*='language-']) {
+			padding: 1em;
+			//background: $color-7;
+		}
+		code:not([class*='language-']) {
+			padding:0 3px;
+			background:$color-5;
+			-moz-border-radius:3px;
+			-webkit-border-radius:3px;
+			border-radius:3px;
+			color: $color-7;
+		}
+		pre code:not([class*='language-']) {
+			background:transparent;
+			color:$color-1;
+		}
+	}//entry
+	
+	
+}
+
+.page-main--full-width.page--theme-general {
+	.entry__header, .entry__footer, .comments, .entry__content>p, .entry__content>h1, .entry__content>h2, .entry__content>h3, .entry__content>h4, .entry__content>h5, .entry__content>h6, .entry__content>ul, .entry__content>ol
+	{
+		max-width: 50rem;
+		margin-left: auto;
+		margin-right: auto;
+
+	}
+	.entry__header {
+		text-align: center;
+	} 
+	.entry__content p {
+		
+		padding: 0.5em;
+	}
+	.comments {
+		padding: 0 2rem;
+		
+	}
+}

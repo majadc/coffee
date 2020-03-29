@@ -49,33 +49,8 @@ input, textarea {
 	font-size: 1rem;
 }
 pre {
-	@include chequered-pattern;
-	@include font($font-2, normal, $normal);
-	font-size: 1rem;
-	line-height: 1.5;
-	margin: $margin-between-blocks;
-	max-width: 100%;
 	overflow: auto;
-	padding: 1em;
-	color:$color-1;
 }
-code, kbd, tt, var {
-	@include font($font-2, normal, $normal);
-	font-size: 1rem;
-}
-code:not([class*='language-']) {
-	padding:0 3px;
-	background:$color-5;
-	-moz-border-radius:3px;
-	-webkit-border-radius:3px;
-	border-radius:3px;
-	color: $color-7;
-}
-pre code:not([class*='language-']) {
-	background:transparent;
-	color:$color-1;
-}
-
 hr {
 	@include separator;
 	border: none;

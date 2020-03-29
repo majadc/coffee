@@ -8,9 +8,7 @@ Layout: Content-Sidebar
 	margin: 0 -25% 0 0;
 	width: 100%;
 }
-.page-main__inner {
-	margin: 0 25% 0 0;
-}
+
 .page-container .widget-area {
 	float: right;
 	overflow: hidden;
