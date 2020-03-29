@@ -1,9 +1,0 @@
-me
-git/
-images/ if there is no new image for theme
-node_modules
-.gitignore
-majadc_coffe-ws.code-workxpace
-
-
-
