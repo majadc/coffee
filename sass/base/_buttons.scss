@@ -1,0 +1,20 @@
+.button-1 {
+	color: $color-7;
+	@include font($font-1, normal, $normal);
+	background-color: $color-3;
+	border: none;
+	border-radius: 2px;
+	text-decoration: none;
+	padding:0 0.5em;
+	font-size: 0.9rem;
+	line-height: 1.8rem;
+	transition: all 0.05s;
+	cursor: pointer;
+	@include hover-active-focus {
+		box-shadow: 1px 1px 3px 0 color.change($color-4, $alpha:0.3);
+		background-color: $color-4;
+		transform: scale(1.02);
+		color: $color-7;
+
+	}
+}

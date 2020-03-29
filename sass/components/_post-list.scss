@@ -1,0 +1,33 @@
+.post-list {
+	&__item {
+		background-color: $color-8;
+		padding:1em 2em 1em 2em;
+		margin: 2em 0;
+		transition: all 0.05s linear;
+		@include hover {
+			box-shadow: 0px 0px 21px 1px rgba(199, 134, 31, 0.3);
+			transform: scale(1.01);
+		}
+	}
+	&__title {
+		margin-top:0;
+		
+		a {
+			display: block;
+			color: $color-4;
+			padding: 0.5em;
+			text-decoration: none;
+			@include hover-active-focus() {
+				color:$color-3;
+				text-decoration: underline;
+			}
+		}
+	}
+	&__more {
+		display: flex;;
+		justify-content: flex-end;
+	}
+	&__cat-links {
+		font-size: 1rem;
+	}
+}

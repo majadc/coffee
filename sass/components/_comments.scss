@@ -1,0 +1,143 @@
+.comments {
+	margin: 2rem 0 0;
+	
+	&__title {
+		margin: 0 0 $margin-bottom-base;
+		font-size: 1.5rem;
+	}
+}
+.comment-list {
+	margin: $margin-top-base 0 $margin-bottom-base;
+	font-size: 1rem;
+	li {
+		margin: $margin-top-base 0 $margin-bottom-base;
+		p {
+			margin: 0;
+		}
+	}
+	.depth-1 {
+		margin:0 0 3rem;
+		&::before {
+			content:'';
+			display: block;
+			width: 40%;
+			height: 6px;
+			margin: 0 auto;
+			background-color: $color-6;
+			box-shadow: inset 0 -3px 6px 2.5px color.change($color-8, $alpha: 0.6);
+			border-radius: 5px;
+			margin: 2rem -2rem 1rem;
+			
+		}
+	}
+	
+	.children {
+		margin: 1rem 0 0 1rem;
+	}
+}
+// li class comment and replies
+.comment {
+	&-body { //article one comment
+
+		.reply {
+			display: flex;
+			justify-content: flex-end;
+			.comment-reply-link {
+				color: $color-7;
+				@include font($font-1, normal, $normal);
+				background-color: $color-3;
+				border-radius: 2px;
+				text-decoration: none;
+				padding:0 0.5em;
+				font-size: 0.9rem;
+				transition: all 0.05s;
+				@include hover-active-focus {
+					box-shadow: 0 0 10px 0 color.change($color-4, $alpha:0.8);
+					background-color: $color-4;
+					transform: scale(1.02);
+
+				}
+			}
+		}
+	}
+	&-author { //in footer
+		img {
+			display: none;
+		}
+		.fn {
+			color: $color-9;
+			@include font($font-1, normal, $normal);
+		}
+		.says {
+			font-size: 0.8rem;
+		}
+	}
+	&-metadata { // in footer
+		display:flex;
+		font-size: 0.8rem;
+		justify-content: flex-end;
+		.edit-link {
+			padding-left: 1rem;
+		}
+	}
+	&-contnet { // one comment
+		p {
+			margin:0;
+		}
+	}
+
+}
+.comment-form {
+	.comment-reply-title {
+		margin-bottom: 0
+	}
+	.logged-in-as {
+		display: flex;
+		justify-content: space-between;
+		font-size: 0.9rem;
+	}
+	.comment-notes {
+		font-size: 1rem;
+		margin:0;
+		.required {
+			font-size: 2rem;
+			margin-top: -1rem;
+		}
+	}
+	.comment-form-comment {
+		
+		textarea, label {
+			display: block;
+			width: 100%;
+		}
+		label {
+			padding-bottom:1rem;
+			&::after {
+				content: '';
+				display: inline-block;
+				width: 2rem;
+				height: 2rem;
+				margin-left: 0.4em;
+				background-image: url('../images/chat.svg');
+				background-size: contain;
+				background-repeat: no-repeat;
+				@supports (-webkit-mask-image: url()) or (mask-image: url()) {
+					background-color: $color-2;
+					-webkit-mask-image: url('../images/chat.svg');
+					-webkit-mask-size: contain;
+					-webkit-mask-repeat: no-repeat;
+					mask-image: url('../images/chat.svg');
+					mask-size: contain;
+					mask-repeat: no-repeat;
+					background-image: none;
+				}
+			}
+		}
+	}
+	.form-submit {
+		display: flex;
+		justify-content: flex-end;
+		
+	}
+}
+

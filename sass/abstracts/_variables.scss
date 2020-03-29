@@ -1,0 +1,96 @@
+@use 'sass:color';
+//fonts
+// 400, 400i, 600
+$font-main: "Raleway", 'Open Sans', Tahoma, 'Geneva', Arial, sans-serif;
+//400 headings, buttons, input type search
+$font-1: 'Oswald', 'Impact', 'Roboto Condensed', Arial, sans-serif;
+//400, 600 logo code menu
+$font-2:  'Baloo Chettan 2', 'Consolas', 'Monaco', 'Andale Mono', 'Ubuntu Mono', monospace;
+//'Comfortaa', 'Open Sans', Tahoma, 'Geneva', Arial, sans-serif;
+//400 index cards
+$font-3: 'Merienda', cursive;
+//400 site description
+$font-4: 'Marck Script', cursive;
+//regular
+$font-5: 'Nosifer', cursive, Arial, Helvetica, sans-serif;
+
+
+//weights of fonts
+$normal: 400;
+$semi-bold: 600;
+$bold: 700;
+
+
+
+//colors
+//font
+$color-1:hsl(330, 5%, 7%); //#141213 rgba(20, 18, 19, 1)
+//font borders
+$color-2: hsl(37, 73%, 45%); //c7861f
+//logo menu links
+$color-3: hsl(353, 72%, 45%); //#c42034;	rgba(196, 32, 52, 1)
+$color-4: hsl(353, 100%, 6%); // 210004 rgba(33, 0, 4, 1)  was: hsl(9, 41%, 16%); //3a1d18 rgba(58, 29, 24, 1)
+//complementary from 8
+$color-5: hsla(195, 72%, 45%, 1); // 209DC7 rgba(32, 157, 199, 1) (moze ten 4780b3 or this blue 349ABF dont know)
+
+
+//sweet spot offset from 8
+//background
+$color-6: hsl(38, 100%, 87%) ;// FFE7BF rgba(255, 231, 191, 1)
+//sweeet spof offset from 10
+// background of notes
+$color-7: hsl(39, 100%, 96%); // FFF8EB rgba(255, 248, 235, 1)
+//palleton from color 10 
+//background main page in theme notes
+$color-8: hsl(37, 100%, 93%); // FFF2DD rgba(255, 242, 221, 1)
+
+// chequered pattern
+$color-9: hsl(222, 25%, 21%); //#283043 rgba(40, 48, 67, 1)	//niebieski
+//complementary to color-5
+$color-10: hsl(117, 27%, 41%); //4F834C rgba(79, 131, 76, 1)
+//pineski index-cards
+$color-11: hsl(256, 18%, 88%); // #dedbe6 rgba(222, 219, 230, 1)
+
+
+$color-white: hsl(0, 100%, 100%); //fff rgba(255, 255, 255, 1)
+$color-black: hsl(0, 0%, 0%,); //#000 rgba(0, 0, 0, 1)
+
+
+//projects colors
+$color-20: indigo;
+
+//typography
+$font-size-base-small: 1rem;
+$font-size-base-medium: 1.1rem;
+$font-size-base-large: 1.2rem;
+$line-height-base: 1.6;
+
+$font-size-1: 1.75rem;
+$font-size-2: 1.65rem;
+$font-size-3: 1.55rem;
+$font-size-4: 1.45rem;
+$font-size-5: 1.35rem;
+$font-size-6: 1.25rem;
+
+$line-height-1: 1.4;
+
+$margin-base: 1em;
+$margin-top-base: 1.5em;
+$margin-bottom-base: 1em;
+
+$margin-left-list: 1em;
+
+$margin-between-blocks: $margin-top-base 0 $margin-bottom-base;
+$margin-between-blocks-reverse: $margin-bottom-base 0 $margin-top-base;
+$margin-between-blocks-auto: $margin-top-base auto $margin-bottom-base;
+
+
+$shadow-rectangle-y: 0 10px 0 -5px color.change($color-2, $alpha:0.25);
+
+
+$card-shadow-out: -4px 4px 8px -1px rgba(199, 134, 31, 0.3);
+$card-shadow-middle: -2px 2px 13px -1px rgba(199, 134, 31, 0.3);
+$card-shadow-over: 0px 0px 21px 1px rgba(199, 134, 31, 0.3);
+
+
+

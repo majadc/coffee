@@ -1,0 +1,21 @@
+.page-main--full-width {
+	background-color: $color-8;
+	.entry__header, .entry__footer, .comments, .entry__content>p, .entry__content>h1, .entry__content>h2, .entry__content>h3, .entry__content>h4, .entry__content>h5, .entry__content>h6, .entry__content>ul, .entry__content>ol
+	{
+		max-width: 50rem;
+		margin-left: auto;
+		margin-right: auto;
+
+	}
+	.entry__header {
+		text-align: center;
+	} 
+	.entry__content p {
+		
+		padding: 0.5em;
+	}
+	.comments {
+		padding: 0 2rem;
+		
+	}
+}

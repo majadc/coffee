@@ -1,0 +1,28 @@
+.site-description {
+	// display: flex;
+	&__text {
+		// display: flex;
+		@include font($font-4, normal, $normal);
+		font-size: 1.3rem;
+		line-height: 1.1;
+		color: $color-2;
+		text-align:center;
+	}
+}
+@include media-query-up ('medium') {
+	.site-description {
+		&__text {
+			@supports (display: grid) {
+				transform: translateY(5rem) skewY(-14deg);
+			}
+			font-size: 1.7rem;
+		}
+	}
+}
+@include media-query-up ('large') {
+	.site-description {
+		&__text {
+			font-size: 2rem;
+		}
+	}
+}

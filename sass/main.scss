@@ -1,0 +1,33 @@
+@use 'sass:color';
+@import 'vendors/normalize';
+@import "abstracts/variables";
+@import "abstracts/functions.scss";
+@import "abstracts/mixins";
+@import "animations/index-cards-anime";
+@import "animations/menu-main-anime";
+@import "animations/rotation-anime";
+@import "base/base";
+@import "base/typgraphy";
+@import "base/buttons";
+@import "base/form";
+@import "layout/layout";
+@import 'layout/header';
+@import 'layout/footer';
+@import 'components/site-branding';
+@import 'components/site-description';
+@import 'components/menu';
+@import 'components/entry';
+@import 'components/page';
+@import 'components/comments';
+@import 'components/post-navigation';
+@import 'components/search-form';
+@import 'components/index-cards';
+//@import 'components/index-cards-flex';
+@import 'components/post-list';
+@import 'components/privacy-policy-block';
+@import "animations/letters-anime";
+@import 'pages/post-full-width';
+@import 'themes/theme-note';
+@import 'vendors/prism';
+
+

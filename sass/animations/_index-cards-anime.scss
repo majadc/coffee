@@ -1,0 +1,54 @@
+//animation cards in index card home page
+@mixin index-card_over ($rotatez) {
+	$name-anime: 'index-card_over-anime' + $rotatez;
+    animation: #{$name-anime} 0.5s cubic-bezier(.18,.89,.32,1.28);
+    animation-fill-mode: forwards;
+	backface-visibility: hidden;
+	$rotatez-opposite: get_opposite($rotatez);
+	@keyframes #{$name-anime} {
+		0% {
+			transform: rotatez($rotatez);
+		}
+		25% {
+			transform: rotatez($rotatez-opposite) 
+		}
+		50% {
+			transform: scale(1) rotatez($rotatez);
+			box-shadow: -2px 2px 13px -1px rgba(199, 134, 31, 0.3);
+		}
+		80% {
+			transform: scale(1.25) rotatez(0);
+		}
+		100% {
+			transform: rotatez(0) scale(1.2);
+			z-index: 45;
+			box-shadow: 0px 0px 21px 1px rgba(199, 134, 31, 0.3);
+		}
+	}
+}
+
+@mixin index-card_out ($rotatez) {
+	$name-anime: 'index-card_out-anime' + $rotatez;
+	animation: #{$name-anime} 0.8s cubic-bezier(.18,.89,.32,1.28);
+	transform-origin: center top;
+    animation-fill-mode: forwards;
+	backface-visibility: hidden;
+	$rotatez-opposite: get_opposite($rotatez);
+    @keyframes #{$name-anime} {
+        0% {
+            transform: rotatez(0deg) scale(1.2);
+            box-shadow: $card-shadow-over;
+        }
+        25% {
+            transform: rotatez($rotatez) 
+        }
+        50% {
+            transform: scale(1) rotatez($rotatez-opposite);
+            box-shadow: $card-shadow-middle;
+        }
+        100% {
+            transform: rotatez($rotatez) scale(1);
+            box-shadow: $card-shadow-out;
+        }
+    }
+}

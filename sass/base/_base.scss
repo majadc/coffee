@@ -1,0 +1,233 @@
+html {
+	margin: 0;
+	padding: 0;
+	background-color: $color-6;
+	box-sizing: border-box;
+}
+*, *::after, *::before {
+	box-sizing: inherit;
+	margin:0;
+	padding:0;
+}
+body {
+	font-size: $font-size-base-small;
+	line-height: $line-height-base;
+	@include font ($font-main, normal, $normal);
+	color: $color-1;
+	vertical-align: baseline;
+	
+	
+}
+pre+p {
+	margin:$margin-base 0;
+}
+ul, ol {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+img[class*="align"],
+img[class*="wp-image-"] {
+    height: auto;
+}
+img.size-full {
+	display:block;
+	margin:0 auto;
+	max-width: 97.5%;
+	height:auto !important;
+	width: auto !important;
+}
+input, textarea {
+	border: none;
+	@include font ($font-2, normal, $normal);
+	font-size: 1rem;
+}
+pre {
+	@include chequered-pattern;
+	@include font($font-2, normal, $normal);
+	font-size: 1rem;
+	line-height: 1.5;
+	margin: $margin-between-blocks;
+	max-width: 100%;
+	overflow: auto;
+	padding: 1em;
+	color:$color-1;
+}
+code, kbd, tt, var {
+	@include font($font-2, normal, $normal);
+	font-size: 1rem;
+}
+code:not([class*='language-']) {
+	padding:0 3px;
+	background:$color-5;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	border-radius:3px;
+	color: $color-7;
+}
+pre code:not([class*='language-']) {
+	background:transparent;
+	color:$color-1;
+}
+
+hr {
+	@include separator;
+	border: none;
+}
+strong {
+	font-weight: $semi-bold;
+}
+em {
+	font-style: italic;
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+ .hidden {
+	display: none !important;
+  }
+  
+  /*
+  * Hide only visually, but have it available for screen readers:
+  * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+  *
+  * 1. For long content, line feeds are not interpreted as spaces and small width
+  *    causes content to wrap 1 word per line:
+  *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+  */
+  
+  .sr-only {
+	border: 0;
+	clip: rect(0, 0, 0, 0);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
+	/* 1 */
+  }
+  
+  /*
+  * Extends the .sr-only class to allow the element
+  * to be focusable when navigated to via the keyboard:
+  * https://www.drupal.org/node/897638
+  */
+  
+  .sr-only.focusable:active,
+  .sr-only.focusable:focus {
+	clip: auto;
+	height: auto;
+	margin: 0;
+	overflow: visible;
+	position: static;
+	white-space: inherit;
+	width: auto;
+  }
+  
+  /*
+  * Hide visually and from screen readers, but maintain layout
+  */
+  
+  .invisible {
+	visibility: hidden;
+  }
+  
+  /*
+  * Clearfix: contain floats
+  *
+  * For modern browsers
+  * 1. The space content is one way to avoid an Opera bug when the
+  *    `contenteditable` attribute is included anywhere else in the document.
+  *    Otherwise it causes space to appear at the top and bottom of elements
+  *    that receive the `clearfix` class.
+  * 2. The use of `table` rather than `block` is only necessary if using
+  *    `:before` to contain the top-margins of child elements.
+  */
+  
+  .clearfix:before,
+  .clearfix:after {
+	content: " ";
+	/* 1 */
+	display: table;
+	/* 2 */
+  }
+  
+  .clearfix:after {
+	clear: both;
+  }
+  
+
+//table
+.table-wrapper {
+	width:100%;
+	overflow-x:scroll;
+}
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font: inherit;
+	font-size: 1rem;
+	vertical-align: baseline;
+  }
+table {
+	margin: $margin-between-blocks-reverse;
+	width: 100%;
+	border-collapse: collapse;
+	box-shadow: $shadow-rectangle-y;
+	color:$color-4;
+}
+table td, table th {
+	padding:0.4em 0.3em;
+}
+table th {
+	@include font ($font-1, normal $normal);
+	text-align:center;
+}
+table thead {
+	text-align:center;
+	border-bottom: 1px solid $color-2;
+}
+table tbody tr:nth-child(odd) {
+	background: color.change($color-2, $alpha: 0.1);
+}
+table tbody tr:nth-child(even) {
+	background: color.change($color-7, $alpha: 1);
+}
+table tbody tr {
+	@include hover {
+		box-shadow: -2rem 0px 0 5px currentColor;
+		transform: scale(1.01);
+	}
+}
+
+
+.has-border-top::before, .has-border-bottom::after  {
+	@include separator;
+}
+
+
+@include media-query-up(medium) {
+	body {
+		font-size: $font-size-base-medium;
+	}
+}
+@include media-query-up (large) {
+	body {
+		font-size: $font-size-base-large;
+	}
+}

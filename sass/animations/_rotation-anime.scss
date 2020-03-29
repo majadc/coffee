@@ -1,0 +1,15 @@
+@mixin rotation-anime () {
+	transform-origin:center center;
+	animation: rotation-anime 0.2s ease-in 2;
+	animation-fill-mode: backwards;
+	backface-visibility: hidden;
+	
+}
+@keyframes rotation-anime {
+	0% {
+		transform: rotate(0.8deg) ;
+	}
+	70% {
+		transform: rotate(0deg) ;
+	}
+}

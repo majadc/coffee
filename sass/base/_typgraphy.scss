@@ -1,0 +1,46 @@
+a {
+	text-decoration: underline;
+	color: $color-3;
+	@include hover-active-focus {
+		text-decoration: none;
+		color: $color-5;
+	}
+	
+}
+
+h1, h2, h3, h4, h5, h6 {
+	@include font($font-1, normal, $normal);
+	line-height: $line-height-1;
+}
+h1 {
+	font-size: $font-size-1;
+	margin: 0 0 $margin-bottom-base 0;
+}
+h2 {
+	font-size: $font-size-2;
+	margin: $margin-top-base 0 $margin-bottom-base 0;
+}
+h3 {
+	font-size: $font-size-3;
+	margin: $margin-top-base 0 $margin-bottom-base 0;
+}
+h4 {
+	font-size: $font-size-4;
+	margin: $margin-top-base 0 $margin-bottom-base 0;
+}
+h5 {
+	font-size: $font-size-5;
+	margin: $margin-top-base 0 $margin-bottom-base 0;
+}
+h6 {
+	font-size: $font-size-6;
+	margin: $margin-top-base 0 $margin-bottom-base 0;
+}
+
+p {
+	margin: $margin-top-base 0 $margin-bottom-base 0;
+}
+
+.page-header {
+	color: $color-2;
+}

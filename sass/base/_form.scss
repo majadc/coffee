@@ -1,0 +1,50 @@
+label {
+	@include font($font-1, normal, $normal);
+	font-size: 1rem;
+	color:$color-4;
+	line-height: 1;
+	padding:0 0.5em 0 0;
+}
+
+textarea, input[type="text"], input[type="email"], input[type="url"] {
+	background:$color-7;
+	box-shadow: inset 0 0 1rem 0 color.change($color-8, $alpha: 0.2);
+	color: $color-4;
+	border-radius: 2px;
+	font-size: 1rem;
+	&:focus {
+		box-shadow: none;
+		outline: 1px solid $color-4;
+	}
+}
+input[type="text"], input[type="email"], input[type="url"] {
+	line-height: 1.7rem;
+	background:$color-7;
+	box-shadow: inset 0 0 1rem 0 color.change($color-8, $alpha: 0.5);
+	padding:0 0.5em;
+}
+textarea {
+	padding: 1em;
+	&:focus {
+		background-color: $color-4;
+		color:$color-7;
+		box-shadow: none;
+		outline: none
+	}
+}
+input[type="submit"] {
+	display: block;
+	padding: 0.4em 0.5em;
+	color: $color-7;
+	@include font($font-1, normal, $normal);
+	background-color: $color-3;
+	border-radius: 2px;
+	transition: all 0.05s;
+	cursor: pointer;
+	@include hover-active-focus {
+		box-shadow: 0 0 10px 0 color.change($color-4, $alpha:0.8);
+		background-color: $color-4;
+		transform: scale(1.02);
+
+	}
+}

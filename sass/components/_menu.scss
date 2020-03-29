@@ -1,0 +1,90 @@
+.menu  {
+	display: flex;
+	flex-wrap: wrap;	
+	flex-direction: column;
+	text-align: right;
+	margin: 0;
+	padding:0;
+	li {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		display: flex;
+		justify-content: flex-end;	
+	}
+	
+	a {
+		display: block;
+		@include font($font-main, normal, $semi-bold);
+		font-size: 1rem;
+		color: $color-3;
+		text-decoration: none;
+		padding: 0 0.5em;
+		transition: color 0.2s;
+		overflow: hidden;
+		&:hover {
+			color: $color-2;
+			box-shadow: inset 0 -3px 0 $color-4;
+		}
+
+	}
+}
+
+@include media-query-up (medium)  {
+	.menu  {
+		a {
+			position: relative;
+			transition: all 0.3s;
+			z-index: 10;
+			padding: 0 2em;
+			&::before, &::after {
+				content: '';
+				display: inline-block;
+				width: 1.4em;
+				height: 1.4em;
+				position: absolute;
+				top: 0;
+				z-index: 9;
+				opacity: 0;
+				transition: all 0.3s ease-in;
+				
+
+			}
+			&::before {
+				left:1.3em;
+				transform: translateX(-1.4rem);
+				border-top: 1px solid $color-2;
+				border-left: 1px solid $color-2;
+				background: transparent;
+				@supports (clip-path: polygon(36% 0, 10% 49%, 38% 100%, 25% 100%, 0% 50%, 25% 0%)) or (-webkit-clip-path: polygon(36% 0, 10% 49%, 38% 100%, 25% 100%, 0% 50%, 25% 0%)) {
+					clip-path: polygon(36% 0, 10% 49%, 38% 100%, 25% 100%, 0% 50%, 25% 0%);
+					border:none;
+					background-color: $color-2;
+				}	
+			}
+			&::after {
+				right: 1.3em;
+				transform: translateX(1.4rem);
+				border-bottom: 1px solid $color-2;
+				border-right: 1px solid $color-2;
+				background: transparent;
+				@supports (clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 65% 100%, 90% 51%, 65% 0)) or (-webkit-clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 65% 100%, 90% 51%, 65% 0)) {
+					clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 65% 100%, 90% 51%, 65% 0);
+					border:none;
+					background-color: $color-2;
+					
+				}	
+			}
+			&:hover {
+				box-shadow: none;
+				&::after, &::before {
+					animation: menu-brackets-anime 0.3s ease-out;
+					animation-fill-mode: forwards;
+				}	
+			}
+	
+		}
+	}
+	
+}
+

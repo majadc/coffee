@@ -1,0 +1,22 @@
+/*
+Theme Name: majadc_coffee
+Layout: Sidebar-Content
+*/
+
+.page-main {
+	float: right;
+	margin: 0 0 0 -25%;
+	width: 100%;
+}
+.page-main__inner {
+	margin: 0 0 0 25%;
+}
+.page-container .widget-area {
+	float: left;
+	overflow: hidden;
+	width: 25%;
+}
+.site-footer {
+	clear: both;
+	width: 100%;
+}
