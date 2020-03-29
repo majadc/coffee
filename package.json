@@ -7,22 +7,11 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch:sass": "sass --watch sass/main.scss:css/main.css ",
 
-    "compile:travel_cards": "sass sass/projects/travel_cards.scss:css/css_projects/style_travel_cards-majadc.css",
-    "concat:travel_cards": "concat -o css/css_projects/style_travel_cards-all.css css/css_projects/style_travel_cards.css css/css_projects/style_travel_cards-majadc.css",
-    "build:travel_cards": "npm-run-all compile:travel_cards concat:travel_cards",
 
-    "compile:grid_floats": "sass sass/projects/grid_floats.scss:css/css_projects/style_grid_floats-majadc.css",
-    "concat:grid_floats": "concat -o css/css_projects/style_grid_floats-all.css css/css_projects/style_grid_floats.css css/css_projects/style_grid_floats-majadc.css",
-    "build:grid_floats": "npm-run-all compile:grid_floats concat:grid_floats",
-
-    
-    "concat:projects": "concat -o css/bundle.css  css/css_projects/single-examples.css css/css_projects/style_travel_cards-all.css css/css_projects/style_grid_floats-all.css",
-
-    "compile:sass": "sass sass/main.scss css/main.comp.css",
-    "concat:css": "concat -o css/main.concat.css css/main.comp.css css/print.css css/bundle.css ",
-    "prefix:css": "postcss css/main.concat.css --use autoprefixer -o css/main.prefix.css",
+    "compile:sass": "sass sass/main.scss css/main.compile.css",
+    "prefix:css": "postcss css/main.compile.css --use autoprefixer -o css/main.prefix.css",
     "compress:css": "sass --style=compressed css/main.prefix.css css/main.css",
-    "build": "npm-run-all build:travel_cards build:grid_floats concat:projects compile:sass concat:css prefix:css compress:css"
+    "build": "npm-run-all compile:sass prefix:css compress:css"
   },
   "repository": {
     "type": "git",
@@ -40,8 +29,6 @@
   "homepage": "https://majadc.com",
   "devDependencies": {
     "autoprefixer": "^9.7.4",
-    "concat": "^1.0.3",
-    "concat-cli": "^4.0.0",
     "postcss-cli": "^7.1.0"
   }
 }

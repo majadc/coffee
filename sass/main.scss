@@ -16,19 +16,17 @@
 @import 'components/site-branding';
 @import 'components/site-description';
 @import 'components/menu';
-@import 'components/entry';
 @import 'components/page';
 @import 'components/comments';
 @import 'components/post-navigation';
 @import 'components/search-form';
 @import 'components/index-cards';
-//@import 'components/index-cards-flex';
 @import 'components/post-list';
 @import 'components/privacy-policy-block';
 @import "animations/letters-anime";
 @import 'themes/theme_general';
 @import 'themes/theme_reset';
-@import 'themes/theme-note';
+@import "themes/print";
 @import 'vendors/prism';
 
 
