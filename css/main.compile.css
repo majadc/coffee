@@ -1655,12 +1655,29 @@ input[type=submit]:hover, input[type=submit]:active, input[type=submit]:focus {
 }
 .page--theme-general {
   background-color: #fff1db;
-  padding: 2rem;
+  padding: 0 2rem 2rem;
+}
+.page--theme-general .entry__header {
+  padding: 2rem 0;
+  position: relative;
 }
 .page--theme-general .entry__header .entry-title {
   color: #c7861f;
   text-align: center;
   font-size: 2.4rem;
+  margin: 0;
+}
+.page--theme-general .entry .has-border-bottom::after {
+  margin: 0;
+  position: absolute;
+  bottom: 0;
+  left: -2rem;
+}
+.page--theme-general .entry__content {
+  padding-top: 2rem;
+}
+.page--theme-general .entry__content *:first-child {
+  margin-top: 0;
 }
 .page--theme-general .entry__footer {
   display: flex;
@@ -1732,8 +1749,6 @@ input[type=submit]:hover, input[type=submit]:active, input[type=submit]:focus {
   list-style: decimal;
 }
 .page--theme-general .entry pre {
-  background-image: linear-gradient(to bottom, transparent 90%, rgba(40, 48, 67, 0.07) 10%), linear-gradient(to right, #fff8eb 90%, rgba(40, 48, 67, 0.07) 10%);
-  background-size: 10px 10px, 10px 10px;
   font-family: "Baloo Chettan 2", "Consolas", "Monaco", "Andale Mono", "Ubuntu Mono", monospace;
   font-style: normal;
   font-weight: 400;
@@ -1744,6 +1759,7 @@ input[type=submit]:hover, input[type=submit]:active, input[type=submit]:focus {
   overflow: auto;
   color: #131112;
   letter-spacing: 1px;
+  box-shadow: -1rem 0 0 1px rgba(199, 134, 31, 0.2);
 }
 .page--theme-general .entry code, .page--theme-general .entry kbd, .page--theme-general .entry tt, .page--theme-general .entry var {
   font-family: "Baloo Chettan 2", "Consolas", "Monaco", "Andale Mono", "Ubuntu Mono", monospace;
@@ -1752,6 +1768,8 @@ input[type=submit]:hover, input[type=submit]:active, input[type=submit]:focus {
   font-size: 1rem;
 }
 .page--theme-general .entry pre:not([class*=language-]) {
+  background-image: linear-gradient(to bottom, transparent 90%, rgba(40, 48, 67, 0.07) 10%), linear-gradient(to right, #fff8eb 90%, rgba(40, 48, 67, 0.07) 10%);
+  background-size: 10px 10px, 10px 10px;
   padding: 1em;
 }
 .page--theme-general .entry code:not([class*=language-]) {
